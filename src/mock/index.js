@@ -1,0 +1,5 @@
+var data = require ("./data.json")
+var Mock = require("mockjs")
+Mock.mock("/api/category",{errno:0,body:data.category})
+Mock.mock("/api/categoryList",{errno:0,body:data.categoryList})
+Mock.mock("/api/homeData",{errno:0,body:data.homeData})
