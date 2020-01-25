@@ -13,14 +13,71 @@
 <style lang="stylus" scoped>
   .container
     width 100%
-    .recoFind-container
-      width 100%
+    .reco-goods
+      .style-LR
+        clearFix()
+        width 100%
+        padding 16px 15px
+        box-sizing border-box
+        margin 8px 0
+        background-color #fff
+        .style-left
+          float left
+          width 200px
+          .user-info
+            display flex
+            align-items center
+            img
+              width 25px
+              height 25px
+              border-radius 50%
+              margin-right 5px
+          .title
+            font-size 16px
+            margin-top 10px
+          .desc
+            font-size 14px
+            color #999
+          .view-count
+            display flex
+            color #999
+            margin-top 20px
+            i
+              font-size 15px
+              margin 0 5px
+        .style-right
+          float right
+          img
+            width 140px
+            height 140px
+            border-radius 5px
       .style-TB
-        display flex
-        flex-wrap wrap
+        width 100%
+        padding 16px 15px
+        box-sizing border-box
+        margin 8px 0
+        background-color #fff
         .user-info
           display flex
-      img
-        width 160px
-        height 150px
+          align-items center
+          img
+            width 25px
+            height 25px
+            border-radius 50%
+            margin-right 5px
+        .title
+          font-size 16px
+          margin-top 10px
+        .main-img
+          width 360px
+          height 156px
+          margin-top 10px
+        .view-count
+          display flex
+          color #999
+          margin-top 10px
+          i
+            font-size 15px
+            margin 0 5px
+
 </style>
