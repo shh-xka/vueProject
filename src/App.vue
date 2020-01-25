@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
-    <FooterGuide class="footer"/>
+    <FooterGuide class="footer" v-show="$route.meta.showFooter"/>
   </div>
 </template>
 
@@ -22,7 +22,8 @@
     background #f5f5f5
     position relative
     .footer
-      position absolute
+      position fixed
+      background #ffffff
       bottom 0
       left 0
 

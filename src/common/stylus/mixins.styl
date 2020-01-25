@@ -1,0 +1,14 @@
+one-px($color)
+  position relative
+  &::after
+    content ""
+    display block
+    position absolute
+    bottom 0
+    height 1px
+    width 100%
+    background $color
+    @media screen and (-webkit-device-pixel-ratio:2)
+      transform scaleY(.5)
+    @media screen and (-webkit-device-pixel-ratio:3)
+      transform scaleY(.333333333333333333333333)
