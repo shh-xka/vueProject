@@ -7,11 +7,8 @@ import category from "../pages/categorylist/category/category.vue"
 import searchGoods from "../pages/searchGoods/searchGoods.vue"
 import find from "../pages/recommend/find/find.vue"
 import select from "../pages/recommend/select/select.vue"
-import emailLogin from "../pages/profile/login/emailLogin/emailLogin.vue"
-import phoneLogin from "../pages/profile/login/phoneLogin/phoneLogin.vue"
 import profileHome from "../pages/profile/home/home.vue"
-import emailRegister from "../pages/profile/register/emailRegister/emailRegister.vue"
-import phoneRegister from "../pages/profile/register/phoneRegister/phoneRegister.vue"
+import register from "../pages/profile/register/register"
 export default [{
     path: "/home",
     component: home,
@@ -81,6 +78,10 @@ export default [{
       {
         path:"login",
         component:profileHome,
+      },
+      {
+        path:"register",
+        component:register
       },
       {
         path:"",

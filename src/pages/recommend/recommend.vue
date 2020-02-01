@@ -12,7 +12,7 @@
       <ul class="nav-list">
         <li class="nav-item" v-for="item in navList" :key="item.id" :class="{active:currentId * 1 === item.id}">
           <router-link :to="{path:`${$route.fullPath}`,query:{id:item.id}}" class="arrActive" >{{item.text}}</router-link>
-          </li>
+        </li>
       </ul>
     </div>
     <div class="content">

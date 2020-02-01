@@ -8,6 +8,7 @@
       <div class="profile-main">
         <router-view/>
       </div>
+      <!-- 关于query得路由得跳转关键知识点： -->
   </div>
 </template>
 
