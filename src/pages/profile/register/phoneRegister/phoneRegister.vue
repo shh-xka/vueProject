@@ -1,5 +1,6 @@
 <template>
     <div class="phone-regis">
+      <form>
       <div class="phone">
         <input type="text" maxlength="11" placeholder="请输入手机号" name="phone" v-model="phone" v-validate="'required|mobile'">
         <span style="color: red;" v-show="errors.has('phone')">{{ errors.first('phone') }}</span>
@@ -20,13 +21,14 @@
       <!-- <div class="error-message">
         <span>{{errorMsg}}</span>
       </div> -->
-      <button class="register" @click="register">注册</button>
+      <button class="register" @click.prevent="register">注册</button>
       <div class="email-register"
       @click="$router.replace({path: '/profile/register', query: {isPhoneRegister: false}})"
       >
         <span>邮箱账号注册</span>
         <i class="iconfont icon-jiantou"></i>
       </div>
+      </form>
     </div>
 
 </template>

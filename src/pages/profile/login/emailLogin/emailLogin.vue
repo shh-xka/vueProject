@@ -1,5 +1,6 @@
 <template>
     <div class="email-login">
+      <form>
       <div class="email">
         <input type="text" placeholder="邮箱账号" v-model="email" name="emailName" v-validate="'required|email'">
         <span style="color: red;" v-show="errors.has('emailName')">{{ errors.first('emailName') }}</span>
@@ -15,7 +16,8 @@
         <span @click="$router.replace({path: '/profile/register', query: {isPhoneRegis: true}})">注册账号</span>
         <span>忘记密码</span>
       </div>
-      <button class="login" @click="login">登录</button>
+      <button class="login" @click.prevent="login">登录</button>
+      </form>
     </div>
 </template>
 

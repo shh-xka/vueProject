@@ -1,16 +1,14 @@
 <template>
   <div class="homeProfile">
-    <div class="content" v-show="isActive">
+    <!-- <div class="content" v-show="isActive">
       <div class="main-logo">
         <img src="http://yanxuan.nosdn.127.net/bd139d2c42205f749cd4ab78fa3d6c60.png" alt="logo">
       </div>
       <div class="login-methods">
-        <!-- <router-link :to="{path:`/profile/login`,query:{isPhoneLogin:true}}"> -->
           <div class="phone-login" :class="{active:className === `phone`}" @click="goto(`phone`,true)">
             <i class="iconfont icon-phone_icon"></i>
             <span>手机号码登录</span>
           </div>
-        <!-- </router-link> -->
         <div class="email-login" :class="{active:className === `email`}" @click="goto(`email`,false)">
           <i class="iconfont icon-youxiang"></i>
           <span>邮箱账号登录</span>
@@ -20,7 +18,7 @@
           <i class="iconfont icon-jiantou"></i>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- 下面是否需要是一个路由：1、这个界面就是一个路由得界面 -->
     <!-- 2、如果还有一个路由得话，那么将是子路由，子路由得话，那么就会在content界面显示 -->
     <!-- query得路由跳转都是在login这个界面，所有得跳转到得query得界面都应该在login路由中 -->
@@ -46,6 +44,9 @@
   import phoneLogin from "../login/phoneLogin/phoneLogin"
   export default {
     name:"homeProfile",
+    props:{
+      isActive:Boolean
+    },
     components:{
       emailLogin,
       phoneLogin,
@@ -53,17 +54,11 @@
     data(){
       return{
         isActive:true,
-        className:"phone"
       }
     },
     methods:{
-      goto(name,pathName){
-        this.className = name
-        this.isActive = false
-        this.$router.push({path:"/profile/login",query:{isPhoneLogin:pathName}})
-      },
       toggleLoginMethod(){
-          this.isActive = true
+          this.$emit("login")
       }
     }
   }

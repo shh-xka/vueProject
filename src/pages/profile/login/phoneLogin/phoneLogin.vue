@@ -1,5 +1,6 @@
 <template>
     <div class="phone-login">
+      <form>
       <div class="phone">
         <input type="text" maxlength="11" placeholder="请输入手机号" name="phone" v-model="phone" v-validate="'required|mobile'">
         <span style="color: red;" v-show="errors.has('phone')">{{ errors.first('phone') }}</span>
@@ -16,7 +17,8 @@
         <span>遇到问题？</span>
         <span>使用密码验证登录</span>
       </div>
-      <button class="login" @click="login">登录</button>
+      <button class="login" @click.prevent="login">登录</button>
+      </form>
     </div>
 </template>
 

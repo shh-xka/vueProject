@@ -1,5 +1,5 @@
 <template>
-  <section class="register-container">
+  <section class="register-container" v-show="!isActive">
       <div class="regis-title">
         <span>{{$route.query.isPhoneRegister? '手机号注册' : '邮箱账号注册'}}</span>
       </div>
@@ -26,6 +26,9 @@
   import emailRegister from "./emailRegister/emailRegister"
   export default {
     name:"register",
+    props:{
+      isActive:Boolean
+    },
     components:{
       phoneRegister,
       emailRegister
